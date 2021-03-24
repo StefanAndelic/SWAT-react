@@ -1,13 +1,22 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import AuthContext from "../utilities/context";
+import AuthContext from "../../utilities/context/authContext";
 
 function NavBar(props) {
   const { user, setUser } = useContext(AuthContext);
 
   return (
     <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-      <Link className="navbar-brand">SWAT</Link>
+      {!user && (
+        <NavLink className="navbar-brand" to="/login">
+          SWAT
+        </NavLink>
+      )}
+      {user && (
+        <NavLink className="navbar-brand" to="/home">
+          SWAT
+        </NavLink>
+      )}
       <button
         className="navbar-toggler"
         type="button"
@@ -36,6 +45,9 @@ function NavBar(props) {
             <React.Fragment>
               <NavLink className="nav item nav-link" to="/home">
                 Home
+              </NavLink>
+              <NavLink className="nav-item nav-link" to="/graph">
+                Graph
               </NavLink>
               <NavLink className="nav-item nav-link" to="/resources">
                 Resources

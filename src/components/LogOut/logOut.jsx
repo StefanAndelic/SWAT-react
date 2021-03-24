@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import AuthContext from "../utilities/context";
-import tokenStorage from "../utilities/tokenStorage";
+import AuthContext from "../../utilities/context/authContext";
+import tokenStorage from "../../utilities/tokenStorage";
 
 function LogOut(props) {
   const { user, setUser } = useContext(AuthContext);

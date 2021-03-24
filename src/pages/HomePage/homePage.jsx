@@ -1,7 +1,7 @@
 import React from "react";
-import LogoImage from "../components/logoImage";
-import logo from "../assets/SWAT.jpg";
-import home from "../assets/home.jpg";
+import LogoImage from "../../components/LogoImage/logoImage";
+import logo from "../../assets/SWAT.jpg";
+import home from "../../assets/home.jpg";
 function HomePage(props) {
   return (
     <React.Fragment>
@@ -37,12 +37,7 @@ function HomePage(props) {
       <div className="container">
         <div className="row">
           <div className="col text-center mt-5">
-            <LogoImage
-              imageName={home}
-              width="900"
-              height="500"
-              alt="SWAT logo"
-            />
+            <LogoImage imageName={home} width="800" height="400" alt="home" />
           </div>
         </div>
       </div>
