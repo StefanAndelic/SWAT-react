@@ -46,9 +46,6 @@ function NavBar(props) {
               <NavLink className="nav item nav-link" to="/home">
                 Home
               </NavLink>
-              <NavLink className="nav-item nav-link" to="/graph">
-                Graph
-              </NavLink>
               <NavLink className="nav-item nav-link" to="/resources">
                 Resources
               </NavLink>
